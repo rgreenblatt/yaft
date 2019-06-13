@@ -50,7 +50,6 @@ enum misc {
 	DRCS_CHARS         = DRCS_CHARSETS * GLYPHS_PER_CHARSET,
 	DEFAULT_CHAR       = SPACE,            /* used for erase char */
 	BRIGHT_INC         = 8,                /* value used for brightening color */
-	OSC_GWREPT         = 8900,             /* OSC Ps: mode number of yaft GWREPT */
 	RGB_FLAG           = 0x10000000,       /* identify RGB colors vs 256 colors */
 };
 
