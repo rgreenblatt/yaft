@@ -50,6 +50,8 @@ enum misc {
 	DRCS_CHARS         = DRCS_CHARSETS * GLYPHS_PER_CHARSET,
 	DEFAULT_CHAR       = SPACE,            /* used for erase char */
 	BRIGHT_INC         = 8,                /* value used for brightening color */
+	OSC_GWREPT         = 8900,             /* OSC Ps: mode number of yaft GWREPT */
+	RGB_FLAG           = 0x10000000,       /* identify RGB colors vs 256 colors */
 };
 
 enum char_attr {
@@ -105,7 +107,7 @@ enum glyph_width {
 
 struct margin_t { uint16_t top, bottom; };
 struct point_t { uint16_t x, y; };
-struct color_pair_t { uint8_t fg, bg; };
+struct color_pair_t { uint32_t fg, bg; };
 
 struct cell_t {
 	const struct glyph_t *glyphp;   /* pointer to glyph */
